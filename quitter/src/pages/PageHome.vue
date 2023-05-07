@@ -30,8 +30,8 @@
             <div class="row justify-between q-mt-sm">
               <q-btn flat round color="gray" icon="far fa-comment"/>
               <q-btn flat round color="gray" icon="fas fa-retweet"/>
-              <q-btn flat round color="gray" icon="far fa-heart"/>
-              <q-btn flat round color="gray" icon="fas fa-trash"/>
+              <q-btn @click="toggleLiked(qweet)" flat round color="gray" icon="far fa-heart"/>
+              <q-btn @click="deleteQweet(qweet)" flat round color="gray" icon="fas fa-trash"/>
             </div>
           </q-item-section>
           <q-item-section side top>{{ qweet.date }}</q-item-section>
@@ -41,7 +41,7 @@
   </q-page>
 </template>
 <script>
-import db from 'boot/Firebase.js'
+import db from 'boot/firebase.js'
 import { formatDistance } from 'date-fns'
 export default {
   name: 'PageHome',

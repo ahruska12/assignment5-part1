@@ -1,10 +1,6 @@
 import firebase from 'firebase/app'
 import 'firebase/firestore'
 
-// access firebase database with db variable
-
-const db = firebase.firestore()
-
 const firebaseConfig = {
   apiKey: 'AIzaSyBhY9TyLosvjdvuwbsHqATBRzWB6VJp3CY',
   authDomain: 'quitter-50c9e.firebaseapp.com',
@@ -17,5 +13,6 @@ const firebaseConfig = {
 // Initialize Firebase
 
 firebase.initializeApp(firebaseConfig)
+const db = firebase.firestore()
 
 export default db
